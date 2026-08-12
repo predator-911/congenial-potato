@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Local data
+*.sqlite
+*.sqlite3
+*.db
+storage/objects/*
+storage/temp/*
+!storage/objects/.gitkeep
+!storage/temp/.gitkeep
+
+# Env / OS
+.env
+.env.*
+.DS_Store

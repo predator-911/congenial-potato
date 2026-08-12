@@ -1,0 +1,1 @@
+import {FileItem} from '../api/files'; import {VisibilityBadge} from './VisibilityBadge'; export const FileCard=({file}:{file:FileItem})=><article className="card"><h3>{file.original_filename}</h3><VisibilityBadge visibility={file.visibility}/></article>;

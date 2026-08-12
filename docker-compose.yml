@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./storage:/app/storage
+    environment:
+      SFS_DATABASE_URL: sqlite:////app/storage/secure_files.sqlite3
+      SFS_STORAGE_ROOT: /app/storage
+      SFS_SECURE_COOKIES: "false"

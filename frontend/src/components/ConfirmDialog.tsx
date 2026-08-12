@@ -1,0 +1,1 @@
+export function ConfirmDialog({message,onConfirm,onCancel}:{message:string;onConfirm:()=>void;onCancel:()=>void}){return <div className="modal"><div className="panel"><p>{message}</p><button onClick={onConfirm}>Confirm</button><button onClick={onCancel}>Cancel</button></div></div>}

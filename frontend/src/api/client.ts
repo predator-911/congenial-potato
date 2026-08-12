@@ -1,0 +1,3 @@
+export type ApiError={error:{code:string;message:string;details?:Record<string,unknown>}};
+export function csrf(){return document.cookie.split('; ').find(x=>x.startsWith('sfs_csrf='))?.split('=')[1]||''}
+export async function api<T>(path:string, init:RequestInit={}):Promise<T>{const res=await fetch('/api'+path,{credentials:'include',headers:{'Content-Type':'application/json','X-CSRF-Token':csrf(),...(init.headers||{})},...init}); if(!res.ok){let e:ApiError; try{e=await res.json()}catch{e={error:{code:'error',message:res.statusText}}} throw new Error(e.error.message)} if(res.status===204)return undefined as T; return res.json()}
