@@ -1,0 +1,1 @@
+import {defineConfig} from '@playwright/test'; export default defineConfig({testDir:'tests',webServer:{command:'docker compose up --build',url:'http://localhost:8000',reuseExistingServer:true,timeout:120000}});

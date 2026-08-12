@@ -1,0 +1,1 @@
+import {formatBytes} from '../utils/formatBytes'; export function UploadProgress({p,speed,eta}:{p:number;speed:number;eta:number}){return <div><div className="bar"><span style={{width:`${p}%`}} /></div><p>{p}% · {formatBytes(speed)}/s · {Math.ceil(eta)}s remaining</p></div>}

@@ -1,0 +1,1 @@
+export function VisibilityBadge({visibility}:{visibility:'private'|'public'}){return <span className={'badge '+visibility}>{visibility==='private'?'PRIVATE — Only you can access this file.':'PUBLIC — Anyone with the share link can access this file.'}</span>}

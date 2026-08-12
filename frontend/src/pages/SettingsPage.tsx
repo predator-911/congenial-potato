@@ -1,0 +1,1 @@
+import {useAuth} from '../hooks/useAuth'; export function SettingsPage(){const {user}=useAuth(); return <section><h1>Account</h1><p>{user?.email}</p><p>Sessions use HTTP-only cookies and CSRF protection.</p></section>}

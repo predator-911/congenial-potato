@@ -1,0 +1,1 @@
+import {useNavigate} from 'react-router-dom'; import {UploadDropzone} from '../components/UploadDropzone'; export function UploadPage(){const nav=useNavigate(); return <UploadDropzone onDone={()=>nav('/')}/>}

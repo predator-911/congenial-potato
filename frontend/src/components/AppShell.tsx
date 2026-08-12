@@ -1,0 +1,2 @@
+import {Link,Outlet} from 'react-router-dom'; import {useAuth} from '../hooks/useAuth'; import {logout} from '../api/auth';
+export function AppShell(){const {user,setUser}=useAuth(); return <><header><Link to="/">SecureFiles</Link><nav><Link to="/upload">Upload</Link><Link to="/settings">Settings</Link>{user&&<button onClick={()=>logout().then(()=>setUser(null))}>Logout</button>}</nav></header><main><Outlet/></main></>}
